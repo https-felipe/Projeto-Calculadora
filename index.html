@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <div id="titulo">
+    <h1>Calculadora Inteligente</h1>
+  </div>
+
+  <section>
+    <div>
+      <h1>Retorno de um número fracionado em inteiro mais próximo:</h1>
+      <div>
+        <input id="value1_round" value="0">
+      </div>
+      <div>
+        <h2>O resultado da operação é:</h2>
+        <input id="round_result" disabled="disabled">
+      </div>
+      <div>
+        <button onclick="round()">CALCULAR</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h1>Potenciação de Dois Números</h1>
+    <div>
+      <input id="value1_pow" value="0">
+      <input id="value2_pow" value="0">
+    </div>
+    <div>
+      <h2>O resultado da operação é:</h2>
+      <input id="pow_result" disabled="disabled">
+    </div>
+    <div>
+      <button onclick="pow()">CALCULAR</button>
+    </div>
+  </section>
+
+  <section>
+    <h1>Cálculos referentes a medida de um Circulo</h1>
+    <div>
+      <h2>Digite o raio do círculo:</h2>
+      <input id="value_radius" value="0">
+    </div>
+    <div>
+      <h2>O resultado da circunferência do círculo é:</h2>
+      <input id="circumference_result" disabled="disabled">
+    </div>
+    <div>
+      <h2>O resultado da área do círculo é:</h2>
+      <input id="area_result" disabled="disabled">
+    </div>
+    <div>
+      <button onclick="circle()">CALCULAR</button>
+    </div>
+  </section>
+
+  <section>
+    <h1>Calculos referentes a medida de um Cubo</h1>
+    <div>
+      <h2>Digite o valor de uma aresta:</h2>
+      <input id="a_cube" value="0">
+    </div>
+    <div>
+      <h2>Área da Base:</h2>
+      <input id="base_area_result" disabled="disabled">
+    </div>
+    <div>
+      <h2>Área total:</h2>
+      <input id="total_area_result" disabled="disabled">
+    </div>
+    <div>
+      <h2>Volume do Cubo:</h2>
+      <input id="volume_result" disabled="disabled">
+    </div>
+    <div>
+      <button onclick="cube()">CALCULAR</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
