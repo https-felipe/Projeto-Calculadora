@@ -11,15 +11,33 @@
 
 
 <body>
-  <div id="titulo">
-    <h1>Calculadora Inteligente</h1>
-  </div>
+  <section>
+    <div id="titulo">
+      <h1>Calculadora Inteligente</h1>
+    </div>
+  </section>
 
   <section>
     <div>
+      <H1> Escolha sua Operação Abaixo:</H1>
+    </div>
+  </section>
+
+  <section id="operators">
+    <div>
+      <button onclick="OpenFracionado()">Numero Fracionado Mais Proximo</button>
+      <button onclick="OpenPotentiation()">Potenciação</button>
+      <button onclick="OpenCircle()">Medida De Um Circulo</button>
+      <button onclick="OpenCube()">Medida De Um Cubo</button>
+    </div>
+  </section>
+
+
+  <section id="OpenFracionado" class="fracionado">
+    <div>
       <h1>Retorno de um número fracionado em inteiro mais próximo:</h1>
       <div>
-        <input id="value1_round" value="0">
+        <input type="number" min="1" placeholder="Digite Apenas Números" id="value1_round">
       </div>
       <div>
         <h2>O resultado da operação é:</h2>
@@ -31,11 +49,11 @@
     </div>
   </section>
 
-  <section>
+  <section id="OpenPotentiation" class="potentiation">
     <h1>Potenciação de Dois Números</h1>
     <div>
-      <input id="value1_pow" value="0">
-      <input id="value2_pow" value="0">
+      <input type="number" min="1" placeholder="Digite Apenas Números" id="value1_pow">
+      <input type="number" min="1" placeholder="Digite Apenas Números" id="value2_pow">
     </div>
     <div>
       <h2>O resultado da operação é:</h2>
@@ -46,11 +64,11 @@
     </div>
   </section>
 
-  <section>
+  <section id="OpenCircle" class="circle">
     <h1>Cálculos referentes a medida de um Circulo</h1>
     <div>
       <h2>Digite o raio do círculo:</h2>
-      <input id="value_radius" value="0">
+      <input type="number" min="1" placeholder="Digite Apenas Números" id="value_radius">
     </div>
     <div>
       <h2>O resultado da circunferência do círculo é:</h2>
@@ -65,11 +83,12 @@
     </div>
   </section>
 
-  <section>
+  <section id="OpenCube" class="cube">
     <h1>Calculos referentes a medida de um Cubo</h1>
     <div>
       <h2>Digite o valor de uma aresta:</h2>
-      <input id="a_cube" value="0">
+
+      <input type="number" min="1" placeholder="Digite Apenas Números" id="a_cube">
     </div>
     <div>
       <h2>Área da Base:</h2>
@@ -87,7 +106,6 @@
       <button onclick="cube()">CALCULAR</button>
     </div>
   </section>
-
   <script src="script.js"></script>
 </body>
 

@@ -31,4 +31,31 @@ function cube() {
   document.getElementById('volume_result').value = volume_result
 }
 
+/* Atualization functions */
+function OpenFracionado() {
+  document.getElementById('OpenFracionado').style.display = 'block';
+  document.getElementById('OpenPotentiation').style.display = 'none';
+  document.getElementById('OpenCircle').style.display = 'none';
+  document.getElementById('OpenCube').style.display = 'none';
+}
 
+function OpenPotentiation() {
+  document.getElementById('OpenPotentiation').style.display = 'block';
+  document.getElementById('OpenCircle').style.display = 'none';
+  document.getElementById('OpenCube').style.display = 'none';
+  document.getElementById('OpenFracionado').style.display = 'none';
+}
+
+function OpenCircle() {
+  document.getElementById('OpenCircle').style.display = 'block';
+  document.getElementById('OpenPotentiation').style.display = 'none';
+  document.getElementById('OpenCube').style.display = 'none';
+  document.getElementById('OpenFracionado').style.display = 'none';
+}
+
+function OpenCube() {
+  document.getElementById('OpenCube').style.display = 'block';
+  document.getElementById('OpenCircle').style.display = 'none';
+  document.getElementById('OpenPotentiation').style.display = 'none';
+  document.getElementById('OpenFracionado').style.display = 'none';
+}
