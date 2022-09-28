@@ -25,42 +25,47 @@
 
   <section id="operators">
     <div>
-      <button onclick="OpenFracionado()">Numero Fracionado Mais Proximo</button>
-      <button onclick="OpenPotentiation()">Potenciação</button>
-      <button onclick="OpenCircle()">Medida De Um Circulo</button>
-      <button onclick="OpenCube()">Medida De Um Cubo</button>
+      <button id="btn-1" onclick="OpenFracionado()">Número Fracionado Mais Proximo</button>
+      <button id="btn-2" onclick="OpenPotentiation()">Potenciação</button>
+      <button id="btn-3" onclick="OpenCircle()">Medida De Um Circulo</button>
+      <button id="btn-4" onclick="OpenCube()">Medida De Um Cubo</button>
     </div>
   </section>
 
 
   <section id="OpenFracionado" class="fracionado">
-    <div>
-      <h1>Retorno de um número fracionado em inteiro mais próximo:</h1>
+    <form>
       <div>
-        <input type="number" min="1" placeholder="Digite Apenas Números" id="value1_round">
+        <h1>Retorno de um número fracionado em inteiro mais próximo:</h1>
+        <div>
+          <input type="number" min="1" step="0.1" placeholder="Digite Apenas Números" id="value1_round">
+        </div>
+        <div>
+          <h2>O resultado da operação é:</h2>
+          <input id="round_result" disabled="disabled">
+        </div>
+        <div>
+          <button type="submit" onclick="round()">CALCULAR</button>
+          <button type="reset">RESETAR</button>
+        </div>
       </div>
-      <div>
-        <h2>O resultado da operação é:</h2>
-        <input id="round_result" disabled="disabled">
-      </div>
-      <div>
-        <button onclick="round()">CALCULAR</button>
-      </div>
-    </div>
   </section>
 
   <section id="OpenPotentiation" class="potentiation">
     <h1>Potenciação de Dois Números</h1>
     <div>
-      <input type="number" min="1" placeholder="Digite Apenas Números" id="value1_pow">
-      <input type="number" min="1" placeholder="Digite Apenas Números" id="value2_pow">
+      <input type="number" min="1" placeholder="10" id="value1_pow">
+      <input type="number" min="1" placeholder="Elevado (A)" id="value2_pow">
     </div>
     <div>
       <h2>O resultado da operação é:</h2>
       <input id="pow_result" disabled="disabled">
     </div>
     <div>
-      <button onclick="pow()">CALCULAR</button>
+      <button type="submit" onclick="pow()">CALCULAR</button>
+      <button type="reset">RESETAR</button>
+
+
     </div>
   </section>
 
@@ -80,6 +85,7 @@
     </div>
     <div>
       <button onclick="circle()">CALCULAR</button>
+      <button type="reset">RESETAR</button>
     </div>
   </section>
 
@@ -87,7 +93,6 @@
     <h1>Calculos referentes a medida de um Cubo</h1>
     <div>
       <h2>Digite o valor de uma aresta:</h2>
-
       <input type="number" min="1" placeholder="Digite Apenas Números" id="a_cube">
     </div>
     <div>
@@ -104,7 +109,10 @@
     </div>
     <div>
       <button onclick="cube()">CALCULAR</button>
+      <button type="reset">RESETAR</button>
+
     </div>
+    </form>
   </section>
   <script src="script.js"></script>
 </body>
