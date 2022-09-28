@@ -4,13 +4,12 @@ function round() {
   document.getElementById('round_result').value = round_result
 }
 
-function pow() {
+function pow(e) {
   let value1_pow = document.getElementById('value1_pow').value
   let value2_pow = document.getElementById('value2_pow').value
   let pow_result = Math.pow(value1_pow, value2_pow)
   document.getElementById('pow_result').value = pow_result
 }
-
 
 function circle() {
   let value_radius = document.getElementById('value_radius').value
@@ -19,7 +18,6 @@ function circle() {
   document.getElementById('circumference_result').value = circumference_result
   document.getElementById('area_result').value = area_result
 }
-
 
 function cube() {
   let a_cube = document.getElementById('a_cube').value
@@ -31,12 +29,17 @@ function cube() {
   document.getElementById('volume_result').value = volume_result
 }
 
-/* Atualization functions */
+// Mostrar Displays
 function OpenFracionado() {
   document.getElementById('OpenFracionado').style.display = 'block';
   document.getElementById('OpenPotentiation').style.display = 'none';
   document.getElementById('OpenCircle').style.display = 'none';
   document.getElementById('OpenCube').style.display = 'none';
+  document.getElementById('btn-1').style.backgroundColor = '#4CAF50';
+  document.getElementById('btn-2').style.backgroundColor = '#eff6ef';
+  document.getElementById('btn-3').style.backgroundColor = '#eff6ef';
+  document.getElementById('btn-4').style.backgroundColor = '#eff6ef';
+
 }
 
 function OpenPotentiation() {
@@ -44,6 +47,10 @@ function OpenPotentiation() {
   document.getElementById('OpenCircle').style.display = 'none';
   document.getElementById('OpenCube').style.display = 'none';
   document.getElementById('OpenFracionado').style.display = 'none';
+  document.getElementById('btn-2').style.backgroundColor = '#4CAF50';
+  document.getElementById('btn-1').style.backgroundColor = '#eff6ef';
+  document.getElementById('btn-3').style.backgroundColor = '#eff6ef';
+  document.getElementById('btn-4').style.backgroundColor = '#eff6ef';
 }
 
 function OpenCircle() {
@@ -51,6 +58,10 @@ function OpenCircle() {
   document.getElementById('OpenPotentiation').style.display = 'none';
   document.getElementById('OpenCube').style.display = 'none';
   document.getElementById('OpenFracionado').style.display = 'none';
+  document.getElementById('btn-3').style.backgroundColor = '#4CAF50';
+  document.getElementById('btn-1').style.backgroundColor = '#eff6ef';
+  document.getElementById('btn-2').style.backgroundColor = '#eff6ef';
+  document.getElementById('btn-4').style.backgroundColor = '#eff6ef';
 }
 
 function OpenCube() {
@@ -58,4 +69,17 @@ function OpenCube() {
   document.getElementById('OpenCircle').style.display = 'none';
   document.getElementById('OpenPotentiation').style.display = 'none';
   document.getElementById('OpenFracionado').style.display = 'none';
+  document.getElementById('btn-4').style.backgroundColor = '#4CAF50';
+  document.getElementById('btn-1').style.backgroundColor = '#eff6ef';
+  document.getElementById('btn-2').style.backgroundColor = '#eff6ef';
+  document.getElementById('btn-3').style.backgroundColor = '#eff6ef';
 }
+
+// Cancelar Carregamento da pagina 
+let form = document.querySelector('form');
+
+form.addEventListener("submit", execult);
+function execult(e) {
+  e.preventDefault();
+}
+
